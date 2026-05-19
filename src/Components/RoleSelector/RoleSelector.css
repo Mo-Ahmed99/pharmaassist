@@ -1,0 +1,52 @@
+.role-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.role-selector__label {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--color-text-medium);
+  letter-spacing: 0.1px;
+}
+
+.role-selector__options {
+  display: flex;
+  gap: 10px;
+}
+
+.role-selector__btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 11px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  border: 1.5px solid var(--color-border);
+  background-color: var(--color-input-bg);
+  color: var(--color-text-medium);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.role-selector__btn:hover:not(.role-selector__btn--active) {
+  border-color: var(--color-primary-border);
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+.role-selector__btn--active {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  font-weight: 600;
+  box-shadow: 0 0 0 3px rgba(42, 191, 171, 0.1);
+}
+
+.role-selector__icon {
+  flex-shrink: 0;
+}

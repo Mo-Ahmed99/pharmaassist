@@ -4,6 +4,7 @@ import './App.css'
 import PharmaGuide from './Components/pharmaGuidUi'
 import Layout from './Routes/Layout'
 import HomePage from './Pages/HomePage'
+import Login from './Pages/Login'
 import DrugSearch from './Pages/DrugSearch'
 import DrugAlternative from './Pages/DrugAlternative'
 
@@ -12,19 +13,20 @@ function App() {
     {path:"/",
     element:<Layout/>,
     children:[
-      {index:true,element:<HomePage/>},
+      {index:true,element:<Login/>},
       {path:"/drugsearch",element:<DrugSearch/>},
       {path:"/drugalternative",element:<DrugAlternative/>}
-      
+
     ]
   }
   ])
 
   return (
-    <>
-      {/* <PharmaGuide/> */}
-      <RouterProvider router={router}/>
-    </>
+    // <>
+    //    <PharmaGuide/>
+       <Login/>
+    //   <RouterProvider router={router}/>
+    // </>
   )
 }
 

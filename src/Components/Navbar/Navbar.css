@@ -1,0 +1,76 @@
+.navbar {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar__pharmacies {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: var(--color-text-medium);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background-color var(--transition);
+  cursor: pointer;
+}
+
+.navbar__pharmacies:hover {
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+.navbar__pharmacies-icon {
+  color: var(--color-text-light);
+  transition: color var(--transition);
+}
+
+.navbar__pharmacies:hover .navbar__pharmacies-icon {
+  color: var(--color-primary);
+}
+
+.navbar__signin {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 3px 10px var(--color-shadow);
+  letter-spacing: 0.1px;
+}
+
+.navbar__signin:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px var(--color-shadow);
+}
+
+.navbar__signin:active {
+  transform: translateY(0);
+}
