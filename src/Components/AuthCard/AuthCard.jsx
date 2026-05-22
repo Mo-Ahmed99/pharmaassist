@@ -3,18 +3,19 @@ import "./AuthCard.css";
 import Logo from "./Logo/Logo";
 import TabSwitch from "./TabSwitch/TabSwitch";
 import InputField from "./InputField/InputField";
-import RoleSelector from "./RoleSelector/RoleSelector";
 import SubmitButton from "./SubmitButton/SubmitButton";
 import { useNavigate } from "react-router-dom";
+
 function AuthCard() {
   const [activeTab, setActiveTab] = useState("signup");
   const [loading, setLoading] = useState(false);
-  const [role, setRole] = useState("patient");
+
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     password: "",
   });
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -24,7 +25,9 @@ function AuthCard() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+
     setTimeout(() => setLoading(false), 2000);
+
     if (activeTab === "signin") {
       navigate("/homepage");
     }
@@ -32,7 +35,11 @@ function AuthCard() {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-    setFormData({ fullName: "", email: "", password: "" });
+    setFormData({
+      fullName: "",
+      email: "",
+      password: "",
+    });
   };
 
   return (
@@ -41,7 +48,9 @@ function AuthCard() {
         <div className="auth-card__logo-wrap">
           <Logo />
         </div>
+
         <h1 className="auth-card__title">Welcome to Pharma Guide</h1>
+
         <p className="auth-card__subtitle">
           {activeTab === "signup"
             ? "Create an account to get started."
@@ -81,10 +90,6 @@ function AuthCard() {
             value={formData.password}
             onChange={handleChange}
           />
-
-          {activeTab === "signup" && (
-            <RoleSelector selectedRole={role} onRoleChange={setRole} />
-          )}
 
           {activeTab === "signin" && (
             <div className="auth-card__forgot">
