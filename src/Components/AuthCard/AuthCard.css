@@ -1,0 +1,120 @@
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  animation: cardEntrance 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.auth-card__logo-wrap {
+  margin-bottom: 4px;
+}
+
+.auth-card__logo-wrap .logo__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+}
+
+.auth-card__logo-wrap .logo__icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.auth-card__logo-wrap .logo__text {
+  display: none;
+}
+
+.auth-card__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.auth-card__subtitle {
+  font-size: 14px;
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.auth-card__body {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.06),
+    0 8px 32px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-card__forgot {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -6px;
+}
+
+.auth-card__forgot-btn {
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 0;
+  font-weight: 500;
+  transition: opacity var(--transition);
+}
+
+.auth-card__forgot-btn:hover {
+  opacity: 0.75;
+}
+
+.auth-card__footer-text {
+  font-size: 13.5px;
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.auth-card__link {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity var(--transition);
+}
+
+.auth-card__link:hover {
+  opacity: 0.75;
+}
