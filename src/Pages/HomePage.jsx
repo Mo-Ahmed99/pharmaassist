@@ -1,10 +1,12 @@
 import { Card } from "../Components/Card/Card";
 import Footer from "../Components/Footer/Footer";
+import Swiper from "../Components/Swiper/Swiper";
 
 export default function HomePage() {
   return (
     <>
-      <div className="container py-4">
+      <Swiper />
+      <div className="container py-5">
         <h1 className="fw-bold mb-3" style={{ color: "#fff" }}>
           Find the right <span className="text-primary">Mediciation</span>{" "}
           instantly

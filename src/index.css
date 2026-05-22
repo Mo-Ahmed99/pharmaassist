@@ -77,7 +77,7 @@ input {
 
 .catalog-title {
   color: #adb5bf;
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-size: 2rem;
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 12px;
@@ -205,4 +205,122 @@ input {
   .footer-text {
     margin: auto;
   }
+}
+
+/* search */
+
+.drug-search-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #031b3d, #062d63, #0a3f8f);
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  max-width: 750px;
+  text-align: center;
+}
+
+.search-title {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.search-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.search-input-group {
+  background: white;
+  border-radius: 18px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.search-icon {
+  padding: 0 1rem;
+  color: #0a3f8f;
+  font-size: 1.1rem;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 0.9rem 0;
+  font-size: 1rem;
+}
+
+.search-btn {
+  border: none;
+  background: linear-gradient(135deg, #00c6a2, #00e0b8);
+  color: white;
+  padding: 0.9rem 1.6rem;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.drug-card {
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.drug-name {
+  color: #062d63;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.drug-info-title {
+  color: #00a884;
+  margin-bottom: 1rem;
+}
+
+.drug-description {
+  color: #444;
+  line-height: 1.7;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .search-title {
+    font-size: 2rem;
+  }
+
+  .search-input-group {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+}
+
+/* swiper */
+.carousel-img {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5px;
 }

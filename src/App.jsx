@@ -1,6 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import PharmaGuide from "./Components/pharmaGuidUi";
 import Layout from "./Routes/Layout";
 import HomePage from "./Pages/HomePage";
 import Login from "./Pages/Login";
@@ -23,8 +22,6 @@ function App() {
 
   return (
     <>
-      {/* <PharmaGuide /> */}
-      {/* //  <Login/> */}
       <RouterProvider router={router} />
     </>
   );
