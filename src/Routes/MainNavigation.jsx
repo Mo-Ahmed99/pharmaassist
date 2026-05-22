@@ -1,3 +1,4 @@
+import '../Styles/MainNavigationStyle.css'
 import SearchIcon from '@mui/icons-material/Search';
 import ChangeCircleIcon from '@mui/icons-material/ChangeCircle';
 import { Link } from "react-router-dom"

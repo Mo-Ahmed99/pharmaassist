@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import './AuthCard.css'
-import Logo from '../Logo/Logo'
-import TabSwitch from '../TabSwitch/TabSwitch'
-import InputField from '../InputField/InputField'
-import RoleSelector from '../RoleSelector/RoleSelector'
-import SubmitButton from '../SubmitButton/SubmitButton'
-
+import Logo from './Logo/Logo'
+import TabSwitch from './TabSwitch/TabSwitch'
+import InputField from './InputField/InputField'
+import RoleSelector from './RoleSelector/RoleSelector'
+import SubmitButton from './SubmitButton/SubmitButton'
+import { useNavigate } from 'react-router-dom'
 function AuthCard() {
   const [activeTab, setActiveTab] = useState('signup')
   const [loading, setLoading] = useState(false)
@@ -15,6 +15,7 @@ function AuthCard() {
     email: '',
     password: '',
   })
+  const navigate=useNavigate();
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
@@ -24,6 +25,10 @@ function AuthCard() {
     e.preventDefault()
     setLoading(true)
     setTimeout(() => setLoading(false), 2000)
+    if (activeTab === 'signin') {
+      navigate('/homepage')
+    }
+
   }
 
   const handleTabChange = (tab) => {

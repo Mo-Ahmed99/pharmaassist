@@ -14,6 +14,7 @@ function App() {
     element:<Layout/>,
     children:[
       {index:true,element:<Login/>},
+      {path:"/homepage",element:<HomePage/>},
       {path:"/drugsearch",element:<DrugSearch/>},
       {path:"/drugalternative",element:<DrugAlternative/>}
 
@@ -22,11 +23,11 @@ function App() {
   ])
 
   return (
-    // <>
-    //    <PharmaGuide/>
-       <Login/>
-    //   <RouterProvider router={router}/>
-    // </>
+    <>
+      <PharmaGuide/>
+      {/* //  <Login/> */}
+      <RouterProvider router={router}/>
+    </>
   )
 }
 
