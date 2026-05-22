@@ -1,134 +1,37 @@
+import { Card } from "../Components/Card/Card";
+import Footer from "../Components/Footer/Footer";
 
-export default function HomePage(){
-    return(
-        <>
-        <div className="container">
-            <h1>Find the right <span>Mediciation</span> instantly</h1>
-            <p>Search 50,000+ medications, check real-time availability at nearby pharmacies, and discover safe alternatives — all in one place.</p>
-            
-            
+export default function HomePage() {
+  return (
+    <>
+      <div className="container py-4">
+        <h1 className="fw-bold mb-3" style={{ color: "#fff" }}>
+          Find the right <span className="text-primary">Mediciation</span>{" "}
+          instantly
+        </h1>
+        <p className="lead mb-4" style={{ color: "#f1f1f1" }}>
+          Search 50,000+ medications, check real-time availability at nearby
+          pharmacies, and discover safe alternatives — all in one place.
+        </p>
+        <div className="catalog-section mb-4">
+          <p className="catalog-label">DRUG CATALOG</p>
+
+          <h3 className="catalog-title">Popular Medications</h3>
+
+          <p className="catalog-count">6 medications found</p>
         </div>
-        <div className="medicin-sepciemens">
-            <div className="card" style={{ width: '18rem' }}>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-
-                    <h6 className="card-subtitle mb-2 text-body-secondary"></h6>
-                    Card subtitle
-                    
-
-                <p className="card-text">
-                Some quick example text to build on the card title and make up the
-                bulk of the card’s content.
-                </p>
-
-                <a href="#" className="card-link">
-                Card link
-                </a>
-
-                <a href="#" className="card-link">
-                Another link
-                </a>
-                </div>
+        <div className="row g-4 justify-content-center">
+          {Array.from({ length: 4 }).map((_, index) => (
+            <div
+              className="col-12 col-sm-6 col-lg-4 col-xl-3 justify-content-center"
+              key={index}
+            >
+              <Card />
             </div>
-            <div className="card" style={{ width: '18rem' }}>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-
-                    <h6 className="card-subtitle mb-2 text-body-secondary"></h6>
-                    Card subtitle
-                    
-
-                <p className="card-text">
-                Some quick example text to build on the card title and make up the
-                bulk of the card’s content.
-                </p>
-
-                <a href="#" className="card-link">
-                Card link
-                </a>
-
-                <a href="#" className="card-link">
-                Another link
-                </a>
-                </div>
-            </div>
-            <div className="card" style={{ width: '18rem' }}>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-
-                    <h6 className="card-subtitle mb-2 text-body-secondary"></h6>
-                    Card subtitle
-                    
-
-                <p className="card-text">
-                Some quick example text to build on the card title and make up the
-                bulk of the card’s content.
-                </p>
-
-                <a href="#" className="card-link">
-                Card link
-                </a>
-
-                <a href="#" className="card-link">
-                Another link
-                </a>
-                </div>
-            </div>
-            <div className="card" style={{ width: '18rem' }}>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-
-                    <h6 className="card-subtitle mb-2 text-body-secondary"></h6>
-                    Card subtitle
-                    
-
-                <p className="card-text">
-                Some quick example text to build on the card title and make up the
-                bulk of the card’s content.
-                </p>
-
-                <a href="#" className="card-link">
-                Card link
-                </a>
-
-                <a href="#" className="card-link">
-                Another link
-                </a>
-                </div>
-            </div>
-            <div className="card" style={{ width: '18rem' }}>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-
-                    <h6 className="card-subtitle mb-2 text-body-secondary"></h6>
-                    Card subtitle
-                    
-
-                <p className="card-text">
-                Some quick example text to build on the card title and make up the
-                bulk of the card’s content.
-                </p>
-
-                <a href="#" className="card-link">
-                Card link
-                </a>
-
-                <a href="#" className="card-link">
-                Another link
-                </a>
-                </div>
-            </div>
+          ))}
         </div>
-        <div >
-            <ul>
-                <li>About</li>
-                <li>Privacy</li>
-                <li>Terms</li>
-                
-            </ul>
-            <p> <span>&copy;</span> 2026 PharmaGuid. All rights reserved </p>
-        </div>
-        </>
-    )
+      </div>
+      <Footer />
+    </>
+  );
 }

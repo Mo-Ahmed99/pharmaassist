@@ -1,40 +1,39 @@
-import React, { useState } from 'react'
-import './AuthCard.css'
-import Logo from './Logo/Logo'
-import TabSwitch from './TabSwitch/TabSwitch'
-import InputField from './InputField/InputField'
-import RoleSelector from './RoleSelector/RoleSelector'
-import SubmitButton from './SubmitButton/SubmitButton'
-import { useNavigate } from 'react-router-dom'
+import { useState } from "react";
+import "./AuthCard.css";
+import Logo from "./Logo/Logo";
+import TabSwitch from "./TabSwitch/TabSwitch";
+import InputField from "./InputField/InputField";
+import RoleSelector from "./RoleSelector/RoleSelector";
+import SubmitButton from "./SubmitButton/SubmitButton";
+import { useNavigate } from "react-router-dom";
 function AuthCard() {
-  const [activeTab, setActiveTab] = useState('signup')
-  const [loading, setLoading] = useState(false)
-  const [role, setRole] = useState('patient')
+  const [activeTab, setActiveTab] = useState("signup");
+  const [loading, setLoading] = useState(false);
+  const [role, setRole] = useState("patient");
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    password: '',
-  })
-  const navigate=useNavigate();
+    fullName: "",
+    email: "",
+    password: "",
+  });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
-  }
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setLoading(true)
-    setTimeout(() => setLoading(false), 2000)
-    if (activeTab === 'signin') {
-      navigate('/homepage')
+    e.preventDefault();
+    setLoading(true);
+    setTimeout(() => setLoading(false), 2000);
+    if (activeTab === "signin") {
+      navigate("/homepage");
     }
-
-  }
+  };
 
   const handleTabChange = (tab) => {
-    setActiveTab(tab)
-    setFormData({ fullName: '', email: '', password: '' })
-  }
+    setActiveTab(tab);
+    setFormData({ fullName: "", email: "", password: "" });
+  };
 
   return (
     <div className="auth-card">
@@ -44,9 +43,9 @@ function AuthCard() {
         </div>
         <h1 className="auth-card__title">Welcome to Pharma Guide</h1>
         <p className="auth-card__subtitle">
-          {activeTab === 'signup'
-            ? 'Create an account to get started.'
-            : 'Sign in or create an account to continue.'}
+          {activeTab === "signup"
+            ? "Create an account to get started."
+            : "Sign in or create an account to continue."}
         </p>
       </div>
 
@@ -54,7 +53,7 @@ function AuthCard() {
         <TabSwitch activeTab={activeTab} onTabChange={handleTabChange} />
 
         <form className="auth-card__form" onSubmit={handleSubmit} noValidate>
-          {activeTab === 'signup' && (
+          {activeTab === "signup" && (
             <InputField
               label="Full name"
               type="text"
@@ -83,11 +82,11 @@ function AuthCard() {
             onChange={handleChange}
           />
 
-          {activeTab === 'signup' && (
+          {activeTab === "signup" && (
             <RoleSelector selectedRole={role} onRoleChange={setRole} />
           )}
 
-          {activeTab === 'signin' && (
+          {activeTab === "signin" && (
             <div className="auth-card__forgot">
               <button type="button" className="auth-card__forgot-btn">
                 Forgot password?
@@ -96,31 +95,31 @@ function AuthCard() {
           )}
 
           <SubmitButton
-            label={activeTab === 'signup' ? 'Create account' : 'Sign in'}
+            label={activeTab === "signup" ? "Create account" : "Sign in"}
             loading={loading}
             onClick={handleSubmit}
           />
         </form>
 
         <p className="auth-card__footer-text">
-          {activeTab === 'signup' ? (
+          {activeTab === "signup" ? (
             <>
-              Already have an account?{' '}
+              Already have an account?{" "}
               <button
                 type="button"
                 className="auth-card__link"
-                onClick={() => handleTabChange('signin')}
+                onClick={() => handleTabChange("signin")}
               >
                 Sign in
               </button>
             </>
           ) : (
             <>
-              Don't have an account?{' '}
+              Don't have an account?{" "}
               <button
                 type="button"
                 className="auth-card__link"
-                onClick={() => handleTabChange('signup')}
+                onClick={() => handleTabChange("signup")}
               >
                 Sign up
               </button>
@@ -129,7 +128,7 @@ function AuthCard() {
         </p>
       </div>
     </div>
-  )
+  );
 }
 
-export default AuthCard
+export default AuthCard;

@@ -1,0 +1,91 @@
+.custom-navbar {
+  background-color: #a0a0a0;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 5px 0 !important;
+}
+.navbar {
+  color: #ffffffb8;
+}
+.pharma-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.pharma-logo:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease;
+}
+
+.feature-link {
+  color: #0f2011 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 12px 22px !important;
+  border-radius: 14px;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  transition: 0.3s ease;
+}
+
+.feature-link:hover {
+  transform: translateY(-2px);
+}
+
+.login-btn,
+.signup-btn {
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.login-btn {
+  background-color: #1a2a47;
+  color: white;
+}
+
+.signup-btn {
+  background-color: #00d2b3;
+  color: #071a35;
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Navbar Toggle */
+.navbar-toggler {
+  color: black !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    margin-top: 20px;
+  }
+
+  .feature-link {
+    width: 100%;
+  }
+
+  .login-btn,
+  .signup-btn {
+    width: 100%;
+  }
+}
