@@ -1,0 +1,12 @@
+/* Add this to the existing AuthCard.css */
+
+.auth-card__error {
+  color: #e53e3e;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  text-align: center;
+}

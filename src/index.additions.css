@@ -1,0 +1,15 @@
+/* Add these to the existing index.css — paste at the bottom */
+
+/* Search results count label */
+.search-results-count {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Nav username display */
+.nav-user-name {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  font-weight: 500;
+}

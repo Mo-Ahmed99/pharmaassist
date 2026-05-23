@@ -1,0 +1,260 @@
+.pharmacy-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #031b3d, #062d63, #0a3f8f);
+  padding-bottom: 4rem;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.dashboard-sub {
+  color: rgba(255,255,255,0.5);
+  margin: 0.25rem 0 0;
+}
+
+.dashboard-feedback {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.dashboard-feedback--success {
+  background: rgba(0, 210, 179, 0.12);
+  color: #00d2b3;
+  border: 1px solid rgba(0, 210, 179, 0.25);
+}
+
+.dashboard-feedback--error {
+  background: rgba(239, 68, 68, 0.12);
+  color: #fc8181;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.dashboard-feedback button {
+  background: none;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* Tabs */
+.dashboard-tabs {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-tab {
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.dashboard-tab:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.dashboard-tab--active {
+  background: linear-gradient(135deg, #00c6a2, #0062cc);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Panel */
+.dashboard-panel {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 2rem;
+}
+
+.panel-title {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Inventory Table */
+.inventory-table-wrap {
+  overflow-x: auto;
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.inventory-table th {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.inventory-table td {
+  color: rgba(255,255,255,0.85);
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+.inventory-table tr:hover td {
+  background: rgba(255,255,255,0.03);
+}
+
+.inv-badge {
+  display: inline-block;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 12px;
+}
+
+.inv-badge--in {
+  background: rgba(0, 210, 179, 0.12);
+  color: #00d2b3;
+  border: 1px solid rgba(0, 210, 179, 0.25);
+}
+
+.inv-badge--out {
+  background: rgba(239, 68, 68, 0.1);
+  color: #fc8181;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.inv-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.inv-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.inv-btn--edit {
+  background: rgba(0, 98, 204, 0.2);
+  color: #5b9ef7;
+  border: 1px solid rgba(0, 98, 204, 0.3);
+}
+
+.inv-btn--edit:hover { background: rgba(0, 98, 204, 0.35); }
+
+.inv-btn--deduct {
+  background: rgba(255, 149, 0, 0.1);
+  color: #ff9500;
+  border: 1px solid rgba(255, 149, 0, 0.25);
+}
+
+.inv-btn--deduct:hover { background: rgba(255, 149, 0, 0.2); }
+
+/* Form */
+.dashboard-form {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+
+.dash-field { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.dash-label {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dash-input {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  transition: 0.2s ease;
+  width: 100%;
+}
+
+.dash-input:focus {
+  outline: none;
+  border-color: #00d2b3;
+  background: rgba(255,255,255,0.09);
+}
+
+.dash-textarea { resize: vertical; min-height: 80px; }
+
+.dash-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.dash-checkbox input { width: 16px; height: 16px; accent-color: #00d2b3; }
+
+.dash-submit-btn {
+  background: linear-gradient(135deg, #00c6a2, #0062cc);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+.dash-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 198, 162, 0.3);
+}
